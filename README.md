@@ -27,8 +27,38 @@ becomes C. To change a message back, each letter is replaced by the one three be
 ### STEP-5: Display the cipher text obtained above.
 
 
-PROGRAM :-
+## PROGRAM :-
+```
+#include <stdio.h>
+#include <string.h>
+void caesarCipher(char *text, int shift) 
+{
+    for (int i = 0; text[i]; i++) 
+    {
+        if (text[i] >= 'A' && text[i] <= 'Z')
+        text[i] = ((text[i]- 'A' + shift) % 26) + 'A';
+        
+    }
+ }
+int main() 
+{
+    char text[] = "KEERTHI";
+    caesarCipher(text, 3);
+    printf("Encrypted Message: %s\n", text);
+    caesarCipher(text,-3);
+    printf("Decrypted Message: %s\n", text);
+    return 0;
+    
+}
+````
+## OUTPUT :-
+
+<img width="1290" height="679" alt="Screenshot 2025-08-30 082632" src="https://github.com/user-attachments/assets/e5509b64-bf3c-4002-88f2-36be4d6a2e59" />
+
+## RESULT:-
+The program executed successfully
 
 
 
-OUTPUT :-
+
+
